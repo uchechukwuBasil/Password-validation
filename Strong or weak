@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main() {
+string p;
+cin >> p;
+int len = p.length();
+int sp=0,num=0;
+    for(int i =0; i<len; i++){     
+if(p[i]=='!' || p[i]=='@' || p[i]=='#' || p[i]=='$' || p[i]=='&' || p[i]=='%'|| p[i]=='*')sp++;
+if(p[i]>=48 && p[i]<58)num++;
+    } 
+    if(num>=2 && sp>=2 && len >=7) 
+    cout << "Strong";
+    else
+    cout << "Weak";
+    return 0;
+}
